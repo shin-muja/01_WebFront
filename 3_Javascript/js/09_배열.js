@@ -174,5 +174,3 @@ function check6() {
   console.log(count);
 
 }
-
-console.log("배열");
