@@ -29,3 +29,4 @@ function lightMode() {
 
 
 console.log("학원에서 작성");
+console.log("집에서 복습 완료");
