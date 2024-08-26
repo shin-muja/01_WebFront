@@ -26,3 +26,6 @@ function lightMode() {
   body.style.color = "black";
   body.style.backgroundColor = "white";
 }
+
+
+console.log("학원에서 작성");
