@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- html 용 주석
+ 종료 태그 전까지 컴퓨터가 해석하지 않음(실행x)
+ 언어마다 주석이 다름-->
+
+<!-- !DOCTYPE(Document Type) : 문서 형식을 지정하는 태그 -->
+
+<html lang="ko">
+
+<!-- html 태그 : html 문서를 정의 하는 태그 
+    이 안에 html 코드를 작성해라라는 의미.
+
+    lang 속성 : html 문서가 어떤 언어로 되어있는지 표시, 검색 엔진이 참고하는
+    용도(설정 언어가 아닌 타언어 사용 시 검색 우선순위에 밀려 오래걸럼)
+-->
+
+    <head>
+
+        <!-- head 태그 : html 문서를 정의하는 태그
+            문서의 제목, 스타일시트(CSS), 스크립트(JS), 메타데이터(문서 정보)-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>01_글자관련태그</title>
+    </head>
+    <body>
+        <!-- body 태그 : 화면에 보여질 html 문서 내용을 작성하는 태그
+        -->
+        
+        안녕하세요
+
+        <!-- H1 ~ H6 (Heading Tag)
+            - 제목을 입력할때 사용하는 태그
+            - 1 ~ 6까지 6단계 폰트 크기가 지정되어 있음
+        -->
+
+        <h1>HTML 입니다</h1>
+        <H2>HTML 입니다</H2>
+        <h3>HTML 입니다</h3>
+        <h4>HTML 입니다</h4>
+        <h5>HTML 입니다</h5>
+        <h6>HTML 입니다</h6>
+
+        <hr>
+        <!-- hr (horizon 수평선) tag-->
+
+        <h3>HTML 문서에서 연속으로 띄어쓰기, 엔터입력시 발생하는 문제점</h3>
+        가                                      나                   다
+
+        라                    마         
+        <!-- HTML은 연속되는 띄어쓰기는 1칸 띄어쓰기로 인식된느 문제점이 있다
+             엔터도 인식 되지 않는다.-->
+        
+        <h3 style="color:red">* 띄어쓰기, 엔터를 html에 표시하는 방법</h3>
+        <!-- &nbsp -->
+         띄어쓰기 : 가&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다
+
+        <!-- br(Line BReak) Tag -->
+        <br>마&nbsp;바<br><br>
+    
+        2. 줄바꿈
+        <br>라<br>마<br>사시스세소<br>
+
+        <hr>
+
+        <h3>p, pre 태그</h3>
+        <!--
+            p 태그 : 문닥, 단락
+            - 글 작성용 태그
+            - 문단을 구분(앞, 뒤 태그와의 간격이 생김)
+        -->
+
+        1번 입니다.<br>
+        2번 입니다.<br>
+        3번 입니다.<br>
+
+
+        <p>1번 입니다.</p>
+        <p>2번 입니다.</p>
+        <p>3번 입니다.</p>
+
+        <p>1번 입니다.<br>2번 입니다.<br>3번 입니다.</p>
+
+        <!-- pre 태그
+             - 글 작성용 태그
+             - 문단을 구분
+             + 시작, 종료 태그 사이에 작성된 문자열의 형식을 그대로 화면에 표현(출력)
+        -->
+
+
+        <pre>
+            1번입니다.          가&nbsp;나
+            2번입니다.<br>
+            3번입니다.
+        </pre>
+
+        <p>
+            <b>B Tag</b> : 단순히 글자를 굵게 표시하는 태그<br>
+            <i>I Tag</i> : 단순히 글자를 기울이는 태그<br><br>
+
+            <b>
+                이전&nbsp;&nbsp;
+                <i>ABC(태그는 중복 적용이 가능하다)</i>
+                &nbsp;&nbsp; 이후<br><br>
+            </b>
+
+            <strong>strong Tag</strong> : 중요성, 심감함 등을 표현하는 강조 태그
+            <em>em Tag</em> : 문장 일부분의 중요성을 강조할 때 사용
+        
+        </p>
+            <!-- 
+                b, i와 strong, em태그의 차이
+                * 웹 접근성 *
+                일반인 뿐만 아니라 장애인, 고령자를 위한
+                웹 사이트에서 제공하는 서비스를
+                모두 이용할 수 있도록 보장하는 것(의무사항)
+            -->
+
+        <p>
+            <mark>mark 태그</mark> : 형광펜 효과를 나타내는 태그<br>
+            <u>U 태그</u> : Under Line(밑줄) 을 나타내는 태그<br>
+            <s>S 태그</s> : 취소선을 나타내는 태그<br>
+            <small>small 태그</small> : 작은 글자를 표시<br>
+
+            sup 태그(윗첨자) : x<sup>2</sup><br>
+            sub 태그(아랫첨자) : log<sub>10</sub>15<br>
+
+            abbr 태그 : 마우스 오버 시 툴팁 출력<br>
+
+            <abbr title="Hyper Text Transger Protocol"><u>HTTP</u></abbr>
+        </p>
+
+        <div style="height: 200px;"></div>
+        <p>
+            <mark>태그</mark>들은 해당 태그내에서 중첩으로 사용 가능하다.<br>
+            <strong>굵은</strong>글자를 사용할 수도 있고,
+            <em>기울이거나</em> <s>취소선</s> 넣는 등<br>
+            다양하게 사용할수 있다.
+        </p>
+
+
+
+        <div style="height: 500px;"></div>
+
+
+
+    </body>
+</html>

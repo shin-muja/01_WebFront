@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>08_하이퍼링크관련태그</title>
+    </head>
+
+    <body>
+        <h1>하이퍼 링크 관련 태그 : a(anchor) 태그</h1>
+
+        <pre>
+a 태그는 현재 html 문서와 다른 html 문서를 연결해서
+페이지 이동을 할 수 있게 하는 기능을 제공
+페이지 이동이기에 실질적 사이트에 탑 배너 클릭 후 링크 이동과 다르다
+
+이 때, a태그로 감싸진 문자열 == 하이퍼링크
+        </pre>
+
+        <hr>
+
+        <h2>a를 이용한 하이퍼링크 구현</h2>
+
+        <!--
+            href : 해당링크를 지정할 경로(상대경로. 절대경로)
+            target 속성 : 연결된 문서를 어디에서 열것인지 지정하는 속성
+                - 기본값 : 같은탭에서 이동
+                - _blank : 새탭   
+        -->
+
+        <ul>
+            <li>
+                <a href="01_글자관련태그.html">01_글자 관련 태그</a>
+            </li>
+            <li>
+                <a href="02_목록관련태그.html" target="_blank">02_목록 관련 태그</a>
+            </li>  
+            <li>
+                <a href="https://www.naver.com" target="_blank">네이버</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>이미지 클릭 시 페이지 이동</h2>
+
+        <a href="https://www.naver.com" target="_blank">
+            <img src="../images/flowers/flower1.jpg" width="120px" alt="네이버">
+        </a>
+
+        <hr>
+
+        <h2>한 페이지 내에서 이동하기</h2>
+
+        <!--
+            id="x" : x 아이디 지정
+            href="x" : 지정한 x 아이디로 이동
+        -->
+        
+        <ul id="index">목록
+            <li>
+                <a href="#cat1">고양이1</a>
+            </li>
+            <li>
+                <a href="#cat2">고양이2</a>
+            </li>
+            <li >
+                <a href="#cat3">고양이3</a>
+            </li>
+        </ul>
+
+        <h3 id="cat1">고양이1</h3>
+        <img src="../images/cats/cat1.jpg">
+
+        <h3 id="cat2">고양이2</h3>
+        <img src="../images/cats/cat2.jpg">
+        
+        <h3 id="cat3">고양이3</h3>
+        <img src="../images/cats/cat3.jpg">
+
+        <a href="#index">목록으로 이동</a>
+
+    </body>
+</html>
