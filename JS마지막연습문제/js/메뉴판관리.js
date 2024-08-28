@@ -1,35 +1,37 @@
 
 
 
-
-
-
-
-
-
 // #resName focus 중 사라지게하기
 document.getElementById("resName").addEventListener("click", (e) => {
-  const resNameInput = document.querySelector("#resNameInput");
+  const resNameInput = document.querySelector(".res-name-hidden");
+
 
   // 숨기기
   e.target.style.display = "none";
 
   // 식당명 input 꺼내기, 커서 대기
-  resNameInput.style.display = "block";
+  // resNameInput.style.display = "block";
+  // resNameInput.focus();
+  resNameInput.classList.toggle("res-name-hidden");
   resNameInput.focus();
+
 
 });
 
 // #resNameInput focus 해제시
-document.querySelector("#resNameInput").addEventListener("blur", (e) => {
+document.querySelector(".res-name-hidden").addEventListener("blur", (e) => {
   const resName = document.querySelector("#resName");  
 
   // 숨기기
-  e.target.style.display = "none";
+  e.target.classList.toggle("res-name-hidden");
 
   // 식당명 변경하면서 드러내기
   resName.style.display = "block";
-  resName.innerText = e.target.value;
+  if ( e.target.value.length == 0) {
+    resName.innerText = "식당명을 입력하세요";
+  } else {
+    resName.innerText = e.target.value;
+  }
 });
 
 
